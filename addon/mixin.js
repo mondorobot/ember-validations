@@ -1,3 +1,4 @@
+import { getOwner } from '@ember/application';
 import ArrayProxy from '@ember/array/proxy';
 import Mixin from '@ember/object/mixin';
 import { reject, all } from 'rsvp';
@@ -8,7 +9,6 @@ import { set, get, computed } from '@ember/object';
 import { warn } from '@ember/debug';
 import Errors from 'ember-validations/errors';
 import Base from 'ember-validations/validators/base';
-import getOwner from 'ember-getowner-polyfill';
 
 const setValidityMixin = Mixin.create({
   isValid: computed('validators.@each.isValid', function() {
