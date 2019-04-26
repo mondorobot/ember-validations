@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import EmberObject, { get } from '@ember/object';
+import { run } from '@ember/runloop';
 import { moduleFor, test } from 'ember-qunit';
 import Base from 'ember-validations/validators/base';
 
@@ -6,12 +7,6 @@ let model;
 let Model;
 let CustomValidator;
 let validator;
-
-const {
-  Object: EmberObject,
-  get,
-  run
-} = Ember;
 
 moduleFor('object:model', 'Base Validator', {
   integration: true,

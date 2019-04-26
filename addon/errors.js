@@ -1,12 +1,6 @@
-import Ember from 'ember';
-
-const {
-  A: emberArray,
-  Object: EmberObject,
-  get,
-  set,
-  run
-} = Ember;
+import { A as emberArray } from '@ember/array';
+import EmberObject, { set, get } from '@ember/object';
+import { run } from '@ember/runloop';
 
 export default EmberObject.extend({
   unknownProperty(property) {

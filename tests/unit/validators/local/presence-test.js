@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import { run } from '@ember/runloop';
+import EmberObject, { set } from '@ember/object';
 import { module, test } from 'qunit';
 import Presence from 'ember-validations/validators/local/presence';
 import Mixin from 'ember-validations/mixin';
@@ -7,12 +8,6 @@ let model;
 let Model;
 let options;
 let validator;
-
-const {
-  Object: EmberObject,
-  run,
-  set
-} = Ember;
 
 module('Presence Validator', {
   setup() {

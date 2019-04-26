@@ -1,4 +1,6 @@
-import Ember from 'ember';
+import { isEmpty } from '@ember/utils';
+import { run } from '@ember/runloop';
+import EmberObject, { set, get } from '@ember/object';
 import { moduleFor, test } from 'ember-qunit';
 import Confirmation from 'ember-validations/validators/local/confirmation';
 import Mixin from 'ember-validations/mixin';
@@ -7,14 +9,6 @@ let model;
 let Model;
 let options;
 let validator;
-
-const {
-  Object: EmberObject,
-  get,
-  isEmpty,
-  run,
-  set
-} = Ember;
 
 moduleFor('object:model', 'Confirmation Validator', {
   integration: true,

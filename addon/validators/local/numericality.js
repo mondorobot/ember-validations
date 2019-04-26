@@ -1,10 +1,10 @@
-import Ember from 'ember';
+import { get } from '@ember/object';
+import { isEmpty } from '@ember/utils';
 import jquery from 'jquery';
 import Base from 'ember-validations/validators/base';
 import Messages from 'ember-validations/messages';
 import Patterns from 'ember-validations/patterns';
 
-const { get, isEmpty } = Ember;
 const { inArray } = jquery;
 
 export default Base.extend({
