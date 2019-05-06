@@ -1,8 +1,7 @@
-import Ember from 'ember';
+import { get } from '@ember/object';
+import { isBlank } from '@ember/utils';
 import Base from 'ember-validations/validators/base';
 import Messages from 'ember-validations/messages';
-
-const { get, isBlank } = Ember;
 
 export default Base.extend({
   init() {

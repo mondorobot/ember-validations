@@ -1,8 +1,6 @@
-import Ember from 'ember';
+import { set, get } from '@ember/object';
 import Base from 'ember-validations/validators/base';
 import Messages from 'ember-validations/messages';
-
-const { get, set } = Ember;
 
 export default Base.extend({
   init() {

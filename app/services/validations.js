@@ -1,8 +1,7 @@
-import Ember from 'ember';
+import Service from '@ember/service';
+import { set } from '@ember/object';
 
-var set = Ember.set;
-
-export default Ember.Service.extend({
+export default Service.extend({
   init: function() {
     set(this, 'cache', {});
   }

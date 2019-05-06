@@ -1,3 +1,8 @@
+import { A as emberArray } from '@ember/array';
+import { isEmpty } from '@ember/utils';
+import { run } from '@ember/runloop';
+import EmberObject, { set, get } from '@ember/object';
+import { setOwner, getOwner } from '@ember/application';
 import Ember from 'ember';
 import { moduleFor, test } from 'ember-qunit';
 import EmberValidations, { validator } from 'ember-validations';
@@ -8,17 +13,9 @@ let User;
 let promise;
 
 const {
-  A: emberArray,
   ArrayController,
   K,
-  Object: EmberObject,
-  ObjectController,
-  get,
-  getOwner,
-  isEmpty,
-  run,
-  set,
-  setOwner
+  ObjectController
 } = Ember;
 
 moduleFor('object:user', 'Validate test', {

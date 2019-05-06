@@ -1,22 +1,14 @@
-import Ember from 'ember';
+import { getOwner } from '@ember/application';
+import ArrayProxy from '@ember/array/proxy';
+import Mixin from '@ember/object/mixin';
+import { reject, all } from 'rsvp';
+import { not, alias } from '@ember/object/computed';
+import { isArray, A as emberArray } from '@ember/array';
+import { isPresent, isNone } from '@ember/utils';
+import { set, get, computed } from '@ember/object';
+import { warn } from '@ember/debug';
 import Errors from 'ember-validations/errors';
 import Base from 'ember-validations/validators/base';
-import getOwner from 'ember-getowner-polyfill';
-
-const {
-  A: emberArray,
-  ArrayProxy,
-  Mixin,
-  RSVP: { all, reject },
-  computed,
-  computed: { alias, not },
-  get,
-  isArray,
-  isNone,
-  isPresent,
-  set,
-  warn
-} = Ember;
 
 const setValidityMixin = Mixin.create({
   isValid: computed('validators.@each.isValid', function() {

@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import { run } from '@ember/runloop';
+import EmberObject, { set } from '@ember/object';
 import { module, test } from 'qunit';
 import Acceptance from 'ember-validations/validators/local/acceptance';
 
@@ -6,12 +7,6 @@ let model;
 let Model;
 let options;
 let validator;
-
-const {
-  Object: EmberObject,
-  run,
-  set
-} = Ember;
 
 module('Acceptance Validator', {
   setup() {

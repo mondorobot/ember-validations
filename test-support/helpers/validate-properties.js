@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import { run } from '@ember/runloop';
 import { test } from 'ember-qunit';
-
-var run = Ember.run;
 
 function validateValues(object, propertyName, values, isTestForValid) {
   var promise = null;

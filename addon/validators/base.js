@@ -1,14 +1,8 @@
-import Ember from 'ember';
-
-const {
-  A: emberArray,
-  Object: EmberObject,
-  RSVP: { reject, resolve },
-  computed: { empty, not },
-  get,
-  on,
-  set
-} = Ember;
+import { A as emberArray } from '@ember/array';
+import { resolve, reject } from 'rsvp';
+import { not, empty } from '@ember/object/computed';
+import { on } from '@ember/object/evented';
+import EmberObject, { set, get } from '@ember/object';
 
 export default EmberObject.extend({
   init() {
